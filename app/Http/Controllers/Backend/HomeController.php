@@ -10,5 +10,9 @@ class HomeController extends Controller
     public function home(){
         return view('backend.master');
     }
+
+    public function dashboard(){
+        return view ('backend.dashboard');
+    }
     
 }

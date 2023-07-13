@@ -1,43 +1,65 @@
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>E-Commerce</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="{{url('backend/css/styles.css')}}" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        
+<html class="loading" lang="en" data-textdirection="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Chameleon Admin is a modern Bootstrap 4 webapp &amp; admin dashboard html template with a large number of components, elegant design, clean and organized code.">
+    <meta name="keywords" content="admin template, Chameleon admin template, dashboard template, gradient admin template, responsive admin template, webapp, eCommerce dashboard, analytic dashboard">
+    <meta name="author" content="ThemeSelect">
+    <title>Dashboard - Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit</title>
+    <link rel="apple-touch-icon" href="{{url('backend/theme-assets/images/ico/apple-icon-120.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url('backend/theme-assets/images/ico/favicon.ico')}}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/css/vendors.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/vendors/css/charts/chartist.css')}}">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN CHAMELEON  CSS-->
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/css/app-lite.css')}}">
+    <!-- END CHAMELEON  CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/css/core/menu/menu-types/vertical-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/css/core/colors/palette-gradient.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('backend/theme-assets/css/pages/dashboard-ecommerce.css')}}">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <!-- END Custom CSS-->
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+
+    <!-- fixed-top-->
+
     @include('backend.fixed.header')
-        <div id="layoutSidenav">
-            
-          @include('backend.fixed.sidebar')
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                       
 
-                    @yield('content')
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
 
-                    </div>
-                </main>
-                
-            </div>
-        </div>
+    @include('backend.fixed.sidebar')
 
-        @include('backend.fixed.footer')
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="{{url('backend/js/scripts.js')}}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="{{url('backend/assets/demo/chart-area-demo.js')}}"></script>
-        <script src="{{url('assets/demo/chart-bar-demo.js')}}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="{{url('js/datatables-simple-demo.js')}}"></script>
-    </body>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+   @yield('content')
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+   @include('backend.fixed.footer')
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="{{url('backend/theme-assets/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="{{url('backend/theme-assets/vendors/js/charts/chartist.min.js')}}" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN CHAMELEON  JS-->
+    <script src="{{url('backend/theme-assets/js/core/app-menu-lite.js')}}" type="text/javascript"></script>
+    <script src="{{url('backend/theme-assets/js/core/app-lite.js')}}" type="text/javascript"></script>
+    <!-- END CHAMELEON  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="{{url('backend/theme-assets/js/scripts/pages/dashboard-lite.js')}}" type="text/javascript"></script>
+    <!-- END PAGE LEVEL JS-->
+  </body>
 </html>
